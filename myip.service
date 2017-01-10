@@ -1,0 +1,10 @@
+[Unit]
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/myip -w /etc/myip
+
+[Install]
+WantedBy=default.target
